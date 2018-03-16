@@ -1,0 +1,2 @@
+docker run -p 3000:3000 --name Abathur python:2-slim 
+#-v /nfs/2017/i/ikozlov:/root
