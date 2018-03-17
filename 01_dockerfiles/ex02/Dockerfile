@@ -1,7 +1,8 @@
 FROM ruby
 
-RUN apt-get -y updare && apt-get -y upgrade && \
-	get install rails
+RUN apt-get -y update && apt-get -y upgrade && \
+	apt-get install -y nodejs && \
+	gem install rails
 
 ONBUILD COPY app/ /opt/
 
