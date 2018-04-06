@@ -1,0 +1,12 @@
+from debian
+
+RUN apt-get -y update &&\
+	apt-get -y upgrade &&\
+	apt-get install -y gcc make\
+	valgrind git vim
+
+USER root
+
+WORKDIR projects
+
+# docker run -it -v /projects:/projects {image_name}
