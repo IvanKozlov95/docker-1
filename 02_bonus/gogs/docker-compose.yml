@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+    ai-mysql:
+      container_name: ai-mysql-server
+      image: mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=gogs
+    ai-gogs:
+      container_name: ai-gogs-server
+      image: gogs/gogs
+      environment:
+        - USER=git
+      ports:
+        - "10023:22"
+        - "10081:3000"
+      links:
+        - "ai-mysql:db"
+
