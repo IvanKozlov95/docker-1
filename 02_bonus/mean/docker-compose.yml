@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+    node-server:
+      container_name: node-server
+      image: mean
+      environment:
+        - MONGODB_URI=mongodb://192.168.99.100
+      ports:
+        - "3000:3000"
+    mongo:
+      container_name: mongo-db
+      image: mongo
+      ports:
+        - "27017:27017"
