@@ -5,8 +5,8 @@ RUN apt-get -y update &&\
 	apt-get install -y gcc make\
 	valgrind git vim
 
-COPY .vimrc /root
-COPY .zshrc /root
+COPY ~/.vimrc /root
+COPY ~/.zshrc /root
 
 USER root
 
